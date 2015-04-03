@@ -1,0 +1,14 @@
+--- xdg-utils-1.1.0-rc3/ChangeLog	2014-10-09 09:44:34.000000000 -0500
++++ xdg-utils-1.1.0-rc3/ChangeLog-patched	2015-05-22 17:54:54.794030550 -0500
+@@ -1,5 +1,11 @@
+ === xdg-utils 1.1.x ===
+ 
++2015-01-19 Rex Dieter <rdieter@fedoraproject.org>
++   * xdg-open: better fix for command injection vulnerability (BR66670)
++
++2015-01-05 Rex Dieter <rdieter@fedoraproject.org>
++   * xdg-open: command injection vulnerability (BR66670)
++
+ 2014-10-09 Rex Dieter <rdieter@fedoraproject.org>
+    * xdg-screensaver plasma5 support
+ 
