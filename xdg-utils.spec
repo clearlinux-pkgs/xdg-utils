@@ -4,7 +4,7 @@
 #
 Name     : xdg-utils
 Version  : 1
-Release  : 12
+Release  : 13
 URL      : https://cgit.freedesktop.org/xdg/xdg-utils/snapshot/0d6eebb27c562e8644ccf616ebdbddf82d0d2dd8.tar.gz
 Source0  : https://cgit.freedesktop.org/xdg/xdg-utils/snapshot/0d6eebb27c562e8644ccf616ebdbddf82d0d2dd8.tar.gz
 Summary  : No detailed summary available
