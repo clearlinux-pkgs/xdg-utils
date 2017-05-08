@@ -1,7 +1,19 @@
 === xdg-utils 1.1.2 (unreleased) ===
 
+2017-02-28 Rex Dieter <rdieter@fedoraproject.org>
+   * xdg-open: Add "chromium" to fallback browsers (BR99366)
+   * xdg-mime: fails on encountering a list for x-scheme-handler (BR44163)
+   * xdg-screensaver: Restore previous X11 screensaver timeout (BR#98509)
+
+2016-12-12 Rex Dieter <rdieter@fedoraproject.org>
+   * Add gio tool support (BR99063)
+
 2016-11-23 Rex Dieter <rdieter@fedoraproject.org>
    * xdg-open/xdg-email: add flatpack support (BR98824)
+
+2016-08-25 Simon Lees <sflees@suse.de>
+   * Add support for LXQt
+   * Add enlightenment to xdg-email, xdg-settings
 
 2016-06-10 Rex Dieter <rdieter@fedoraproject.org>
    * xdg-open: prefer open_generic_xdg_x_scheme_handler over open_envvar (BR96472)
