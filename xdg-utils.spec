@@ -4,7 +4,7 @@
 #
 Name     : xdg-utils
 Version  : 1.1.2
-Release  : 16
+Release  : 17
 URL      : https://portland.freedesktop.org/download/xdg-utils-1.1.2.tar.gz
 Source0  : https://portland.freedesktop.org/download/xdg-utils-1.1.2.tar.gz
 Summary  : No detailed summary available
@@ -50,12 +50,19 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1519926917
+export SOURCE_DATE_EPOCH=1519927312
 %configure --disable-static
 make  %{?_smp_mflags}
 
+%check
+export LANG=C
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost,127.0.0.1,0.0.0.0
+make test || :
+
 %install
-export SOURCE_DATE_EPOCH=1519926917
+export SOURCE_DATE_EPOCH=1519927312
 rm -rf %{buildroot}
 %make_install
 
