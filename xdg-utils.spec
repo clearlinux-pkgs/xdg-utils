@@ -4,7 +4,7 @@
 #
 Name     : xdg-utils
 Version  : 1.1.2
-Release  : 17
+Release  : 18
 URL      : https://portland.freedesktop.org/download/xdg-utils-1.1.2.tar.gz
 Source0  : https://portland.freedesktop.org/download/xdg-utils-1.1.2.tar.gz
 Summary  : No detailed summary available
