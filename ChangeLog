@@ -1,4 +1,22 @@
-=== xdg-utils 1.1.2 (unreleased) ===
+=== xdg-utils 1.1.3 ===
+
+2018-05-10
+   * xdg-open: Add Deepin Desktop Environment support (BR106143)
+   * xdg-open: use pcmanfm only if it is available (BR106161) 
+
+2018-05-09
+   * xdg-open: Argument injection in xdg-open open_envvar (BR103807)
+
+2018-05-02
+   * xdg-settings: check_browser is broken under kde when just the binary is specified (BR106343)
+
+2018-02-27
+   * xdg-open: Fixes LXQt behavior (BR81674,BR103146)
+
+2017-12-18
+   * xdg-mime awk script syntax error (BR104298)
+
+=== xdg-utils 1.1.2 ===
 
 2017-02-28 Rex Dieter <rdieter@fedoraproject.org>
    * xdg-open: Add "chromium" to fallback browsers (BR99366)
@@ -539,7 +557,7 @@
 
 2006-04-24 Kevin Krammer <kevin.krammer@gmx.at>
     * Applied patch provided by Benedikt Meurer <benedikt.meurer@unix-ag.uni-siegen.de>
-      to improve the compatability of the Makefile
+      to improve the compatibility of the Makefile
     * Added --title option to xdg-file-dialog
     * Applied another path by Benedikt to let xdg-file-dialog use
       zenity on GNOME and XFCE
@@ -562,7 +580,7 @@
       Currently only used in xdg-mime to gather feedback
 
 2006-04-08 Kevin Krammer <kevin.krammer@gmx.at>
-    * In case of $BROWSER being not avialable or empty, try a fixed list of well
+    * In case of $BROWSER being not available or empty, try a fixed list of well
       known browsers instead
 
 2006-04-06 Kevin Krammer <kevin.krammer@gmx.at>
