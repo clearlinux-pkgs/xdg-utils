@@ -4,13 +4,14 @@
 #
 Name     : xdg-utils
 Version  : 1.1.3
-Release  : 19
+Release  : 20
 URL      : https://portland.freedesktop.org/download/xdg-utils-1.1.3.tar.gz
 Source0  : https://portland.freedesktop.org/download/xdg-utils-1.1.3.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : MIT
 Requires: xdg-utils-bin
+Requires: xdg-utils-license
 Requires: xdg-utils-man
 BuildRequires : docbook-xml
 BuildRequires : libxml2
@@ -29,10 +30,19 @@ basic desktop integration functions for any Free Desktop, such as Linux.
 %package bin
 Summary: bin components for the xdg-utils package.
 Group: Binaries
+Requires: xdg-utils-license
 Requires: xdg-utils-man
 
 %description bin
 bin components for the xdg-utils package.
+
+
+%package license
+Summary: license components for the xdg-utils package.
+Group: Default
+
+%description license
+license components for the xdg-utils package.
 
 
 %package man
@@ -51,7 +61,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1526353026
+export SOURCE_DATE_EPOCH=1530996547
 %configure --disable-static
 make  %{?_smp_mflags}
 
@@ -63,8 +73,10 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make test || :
 
 %install
-export SOURCE_DATE_EPOCH=1526353026
+export SOURCE_DATE_EPOCH=1530996547
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/doc/xdg-utils
+cp LICENSE %{buildroot}/usr/share/doc/xdg-utils/LICENSE
 %make_install
 
 %files
@@ -80,6 +92,10 @@ rm -rf %{buildroot}
 /usr/bin/xdg-open
 /usr/bin/xdg-screensaver
 /usr/bin/xdg-settings
+
+%files license
+%defattr(-,root,root,-)
+/usr/share/doc/xdg-utils/LICENSE
 
 %files man
 %defattr(-,root,root,-)
