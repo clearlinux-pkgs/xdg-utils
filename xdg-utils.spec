@@ -4,7 +4,7 @@
 #
 Name     : xdg-utils
 Version  : 1.1.3
-Release  : 21
+Release  : 22
 URL      : https://portland.freedesktop.org/download/xdg-utils-1.1.3.tar.gz
 Source0  : https://portland.freedesktop.org/download/xdg-utils-1.1.3.tar.gz
 Summary  : Command line tools that assist applications with a variety of desktop integration tasks
@@ -20,6 +20,7 @@ BuildRequires : libxslt-bin
 BuildRequires : links
 BuildRequires : util-linux
 BuildRequires : xmlto
+BuildRequires : xset
 Patch1: try-firefox.patch
 
 %description
@@ -63,7 +64,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1550636341
+export SOURCE_DATE_EPOCH=1550636448
 %configure --disable-static
 make  %{?_smp_mflags}
 
@@ -75,7 +76,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make test || :
 
 %install
-export SOURCE_DATE_EPOCH=1550636341
+export SOURCE_DATE_EPOCH=1550636448
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/xdg-utils
 cp LICENSE %{buildroot}/usr/share/package-licenses/xdg-utils/LICENSE
